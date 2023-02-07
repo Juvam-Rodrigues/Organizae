@@ -21,7 +21,7 @@
             <a href="/index.html" class="logo"><i class="ri-booklet-fill"></i><span>Organiza Aê</span></a>
 
             <div class="main">
-                <a href="/login" class="user"><i class="ri-user-3-fill"></i><span>Login</span></a>
+                <a href="/" class="user"><i class="ri-user-3-fill"></i><span>Login</span></a>
                 <a href="/registro" class="user"><i class="ri-login-box-fill"></i><span>Registrar</span></a>
             </div>
         </nav>
@@ -29,13 +29,14 @@
     <main>
         <div class="content">
 
-            <form action="#" method="post" id="form-login">
+            <form action="/registro" method="post" id="form-login">
+                {{ csrf_field() }}
                 <h1>Registro</h1>
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
                 <input type="email" name="email" id="email" placeholder="Digite seu email">
                 <input type="file" name="foto-perfil" id="foto-perfil" placeholder="Insira a foto de perfil">
                 <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
-                <input type="password" name="senha-novamente" id="senha-novamente" placeholder="Digite sua senha novamente">
+                <input type="password" name="confirmacao" id="senha-novamente" placeholder="Digite sua senha novamente">
                 <button type="submit">Cadastrar</button>
             </form>
 

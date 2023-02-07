@@ -20,17 +20,17 @@ class EstudantesController extends Controller
     }
 
     public function create(Request $request) {
-        $nome = $request->name;
+        $nome = $request->nome;
         $email = $request->email;
-        $senha = $request->password;
-        $confirmacao = $request->confirm_password;
+        $senha = $request->senha;
+        $confirmacao = $request->confirmacao;
 
         $novo = Estudante::criarUsuario($nome, $email, $senha, $confirmacao);
 
         if ($novo == null) {
-            return redirect("/estudantes");
+            return redirect("/registro")->with('msg', 'Dados inseridos incorretamente.');
         } else {
-            return redirect("/estudantes/{$novo->id}");
+            return redirect("/login")->with('msg', 'Conta criada com sucesso, logue normalmente.');;
         }
     }
 }

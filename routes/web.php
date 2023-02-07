@@ -22,6 +22,6 @@ Route::get('/', function () {
 Route::get('/estudantes', [EstudantesController::class, 'index']);
 Route::get('/registro', [EstudantesController::class, 'new']);
 Route::get('/estudantes/{id}', [EstudantesController::class, 'show']);
-Route::post('/estudantes', [EstudantesController::class, 'create']);
-
-Route::get('/login', [SessoesController::class, 'new']);
+Route::post('/registro', [EstudantesController::class, 'create']);
+Route::post('/logar', [SessoesController::class, 'create']);
+Route::get('/', [SessoesController::class, 'new']);

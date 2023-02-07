@@ -22,7 +22,7 @@
             <a href="./index.html" class="logo"><i class="ri-booklet-fill"></i><span>Organiza Aê</span></a>
 
             <div class="main">
-                <a href="/login" class="user"><i class="ri-user-3-fill"></i><span>Login</span></a>
+                <a href="/" class="user"><i class="ri-user-3-fill"></i><span>Login</span></a>
                 <a href="/registro" class="user"><i class="ri-login-box-fill"></i><span>Registrar</span></a>
             </div>
         </nav>
@@ -30,7 +30,8 @@
     <main>
         <div class="content">
 
-            <form action="#" method="post" id="form-login">
+            <form action="/logar" method="POST" id="form-login">
+                {{ csrf_field() }}
                 <h1>Login</h1>
                 <input type="email" name="email" id="email" placeholder="Digite seu email">
                 <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
