@@ -13,16 +13,21 @@ class Estudante extends Model
     
     // USUÁRIO
     
-    public static function criarUsuario($nome, $senha, $foto_perfil, $repetirSenha, $email){
-        if($senha == $repetirSenha){
+    public static function criarUsuario($nome, $email, $senha, $repetirSenha) {
+        $foto_perfil = "";
+
+        if ($senha == $repetirSenha){
             $e = new Estudante([
                 'nome' => $nome, 'senha' => $senha, 'email' => $email, 'foto_perfil' => $foto_perfil
             ]);
+
             $e->save();
             return $e;
         }
+
         return null;
     }
+
     public static function logar($email, $senha){
         $estudante = Estudante::where('email', $email)->first();
 
