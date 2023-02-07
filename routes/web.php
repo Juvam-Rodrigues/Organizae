@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EstudantesController;
 use App\Http\Controllers\SessoesController;
+use App\Http\Controllers\MateriasController;
+use App\Http\Controllers\SobreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +27,8 @@ Route::get('/estudantes/{id}', [EstudantesController::class, 'show']);
 Route::post('/registro', [EstudantesController::class, 'create']);
 Route::post('/logar', [SessoesController::class, 'create']);
 Route::get('/', [SessoesController::class, 'new']);
+Route::get('/materias', [MateriasController::class, 'materia']);
+Route::get('/sobrenos', [SobreController::class, 'show']);
+
+
+

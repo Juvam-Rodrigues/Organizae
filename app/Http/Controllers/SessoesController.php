@@ -15,5 +15,10 @@ class SessoesController extends Controller
         $email = $r->email;
         $senha = $r->senha;
         Estudante::logar($email, $senha);
+        if(true){
+            return redirect("/materias");
+        }
+        return redirect("/login");
+
     }
 }

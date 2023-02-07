@@ -30,7 +30,7 @@ class EstudantesController extends Controller
         if ($novo == null) {
             return redirect("/registro")->with('msg', 'Dados inseridos incorretamente.');
         } else {
-            return redirect("/login")->with('msg', 'Conta criada com sucesso, logue normalmente.');;
+            return redirect("/")->with('msg', 'Conta criada com sucesso, logue normalmente.');;
         }
     }
 }

@@ -18,7 +18,7 @@
     <header>
         <nav>
 
-            <a href="/index.html" class="logo"><i class="ri-booklet-fill"></i><span>Organiza Aê</span></a>
+            <a href="/sobrenos" class="logo"><i class="ri-booklet-fill"></i><span>Organiza Aê</span></a>
 
             <div class="main">
                 <a href="/" class="user"><i class="ri-user-3-fill"></i><span>Login</span></a>
