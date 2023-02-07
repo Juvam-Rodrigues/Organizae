@@ -20,8 +20,8 @@ Route::get('/', function () {
 });
 
 Route::get('/estudantes', [EstudantesController::class, 'index']);
-Route::get('/estudantes/new', [EstudantesController::class, 'new']);
+Route::get('/registro', [EstudantesController::class, 'new']);
 Route::get('/estudantes/{id}', [EstudantesController::class, 'show']);
 Route::post('/estudantes', [EstudantesController::class, 'create']);
 
-Route::get('/sessoes/new', [SessoesController::class, 'new']);
+Route::get('/login', [SessoesController::class, 'new']);

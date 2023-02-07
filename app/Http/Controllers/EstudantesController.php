@@ -30,7 +30,7 @@ class EstudantesController extends Controller
         if ($novo == null) {
             return redirect("/estudantes");
         } else {
-            return redirect("/estudantes/" + $novo->id);
+            return redirect("/estudantes/{$novo->id}");
         }
     }
 }

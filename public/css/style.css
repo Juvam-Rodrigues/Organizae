@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+:root {
+    --bg-dark-color: #222327;
+    
+    --text-color: #fff;
+    --text-secundary-color: #a7a7a7;
+    --main-color: #0099ff;
+    --main-dark-color: #0050ff;
+    /* --bg-subdark-color:#b4b0ac; */
+    --bg-subdark-color:#2c2c2c;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--bg-subdark-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+/* ===== NAVBAR ===== */
+header {
+    background-color: var(--bg-dark-color);
+}
+header, main {
+    padding: 28px 12%;
+    transition: all .50s ease;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 7vh;
+}
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+}
+nav i {
+    color: var(--main-color);
+    margin-right: 7px;
+    color: var(--main-color);
+    font-size: 28px;
+    font-weight: 7px;
+    margin-right: 3px;
+}
+.logo {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo span{
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+/* ===== LOGIN & REGISTRO ===== */
+.user {
+    display: inline-flex;
+    align-items: center;
+}
+main {
+    display: flex;
+    justify-content: space-around;
+    height: 93vh;
+}
+main .content {
+    height: 70%;
+}
+main .content span{
+    font-weight: 600;
+}
+main .image-box img {
+    max-height: 70%;
+    max-width: 80%;
+    border-radius: 30px;
+}
+main input {
+    background: none;
+    border: none;
+    color: var(--text-secundary-color);
+    border-bottom: 2px solid var(--text-secundary-color);
+    width: 90%;
+    margin-bottom: 2em;
+    font-size: 1rem;
+}
+main button {
+    text-decoration: none;
+    padding: 1em;
+    font-size: 16pt;
+    cursor: pointer;
+    margin-top: 40px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    color: var(--bg-dark-color);
+    font-weight: bold;
+    background-color: var(--main-color);
+    text-align: center;
+}
+main input:focus {
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: 0;
+    border-bottom: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+main .logo-user {
+    display: flex;
+    height: 70%;
+    margin: auto;
+}
+main .logo-user div i {
+    font-size: 100px;
+    color: var(--main-color);
+}
+form h1 {
+    font-weight: bold;
+    padding: 1em;
+    padding-left: 0;
+    color: var(--main-color);
+}
+/* ===== MATÉRIAS ===== */
+#slider {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section .card .image {
+    height: 250px;
+    width: 250px;
+    padding: 5px;
+}
+section .card .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--main-dark-color);
+    background: var(--main-color);
+}
+.card {
+    position: relative;
+    background-color: #797979;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px var(--bg-dark-color);
+    margin: 20px 0;
+}
+.card::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: var(--main-color);
+    border-radius: 20px 20px 0 0;
+}
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+.card .icons-materias {
+    color: #fff;
+    position: absolute;
+    font-size: 2em;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    opacity: 0.6;
+}
+.card .name-materia {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top: 10px;
+    color: var(--text-color);
+    padding-bottom: 1.4rem;
+}
+.name-materia .name {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+/* = = = = = = = = = = */
+@media (max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+    .user > span, main > .logo-user {
+        display: none;
+    }
+
+    main {
+        height: 70vh;
+        margin-bottom: 0;
+    }
+
+}
