@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Organiza-Aê</title>
@@ -17,8 +17,7 @@
             <a href="#" class="logo"><i class="ri-booklet-fill"></i></i><span>Organiza Aê</span></a>
             
             <div class="main">
-                <a href="/" class="user"><i class="ri-user-3-fill"></i><span>Login</span></a>
-                <a href="/registro" class="user"><i class="ri-login-box-fill"></i><span>Registrar</span></a>
+                <a href="/materias" class="user"><i class="ri-arrow-left-circle-fill"></i><span>Voltar</span></a>
             </div>
         </nav>
     </header>

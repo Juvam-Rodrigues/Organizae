@@ -9,4 +9,7 @@ class SobreController extends Controller
     public function show(){
         return view("sobre/index");
     }
+    public function showLogado(){
+        return view("sobre/logado");
+    }
 }

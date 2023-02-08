@@ -20,7 +20,7 @@
     <header>
         <nav>
 
-            <a href="/sobrenos" class="logo"><i class="ri-booklet-fill"></i><span>Organiza Aê</span></a>
+            <a href="/sobrenos/logado" class="logo"><i class="ri-booklet-fill"></i><span>Organiza Aê</span></a>
             <a href="#" class="btn"><i class="ri-calendar-fill"></i></a>
             <div class="main" id="divperfil">
 

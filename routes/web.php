@@ -30,6 +30,6 @@ Route::get('/', [SessoesController::class, 'new']);
 Route::get('/materias', [MateriasController::class, 'materia']);
 Route::get('/sobrenos', [SobreController::class, 'show']);
 Route::get('/deslogar', [SessoesController::class, 'back']);
-
+Route::get('/sobrenos/logado', [SobreController::class, 'showLogado']);
 
 
