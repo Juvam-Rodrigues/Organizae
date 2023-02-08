@@ -29,6 +29,7 @@ Route::post('/logar', [SessoesController::class, 'create']);
 Route::get('/', [SessoesController::class, 'new']);
 Route::get('/materias', [MateriasController::class, 'materia']);
 Route::get('/sobrenos', [SobreController::class, 'show']);
+Route::get('/deslogar', [SessoesController::class, 'back']);
 
 
 

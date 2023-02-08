@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -23,11 +24,32 @@
 
             <div class="main">
 
-                <a href="./logoff.html" class="user"><i class="ri-user-3-fill"></i><span> {{ session()->get('estudante')->nome }} </span></a>
+                <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" class="user"><i class="ri-user-3-fill"></i><span> {{ session()->get('estudante')->nome }} </span></a>
                 <!-- <a href="./cadastrar" class="user"><i class="ri-login-box-fill"></i><span>Registrar</span></a> -->
             </div>
         </nav>
     </header>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu lateral</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+                Neste menu lateral, você poderá fazer as seguintes ações:
+          </div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Ações
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Editar dados</a></li>
+              <li><a class="dropdown-item" href="#">#</a></li>
+              <li><a class="dropdown-item" href="/deslogar">Deslogar</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     <main id="slider">
         <section class="materias">
 
@@ -55,6 +77,8 @@
         </section>
     </main>
     
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -24,4 +24,8 @@ class SessoesController extends Controller
         }
 
     }
+    public function back(){
+        session()->get('estudante')->deslogar();
+        return redirect("/");
+    }
 }
