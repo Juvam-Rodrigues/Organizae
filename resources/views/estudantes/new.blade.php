@@ -29,12 +29,12 @@
     <main>
         <div class="content">
 
-            <form action="/registro" method="post" id="form-login">
+            <form action="/registro" method="post" id="form-login" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <h1>Registro</h1>
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
                 <input type="email" name="email" id="email" placeholder="Digite seu email">
-                <input type="file" name="foto-perfil" id="foto-perfil" placeholder="Insira a foto de perfil">
+                <input type="file" name="foto_perfil" id="foto-perfil" placeholder="Insira a foto de perfil" accept="image/*">
                 <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
                 <input type="password" name="confirmacao" id="senha-novamente" placeholder="Digite sua senha novamente">
                 <button type="submit">Cadastrar</button>

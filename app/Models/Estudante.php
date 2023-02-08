@@ -14,8 +14,7 @@ class Estudante extends Model
     
     // USUÁRIO
     
-    public static function criarUsuario($nome, $email, $senha, $repetirSenha) {
-        $foto_perfil = "";
+    public static function criarUsuario($nome, $email, $senha, $repetirSenha, $foto_perfil) {
 
         if ($senha == $repetirSenha){
             $e = new Estudante([

@@ -24,8 +24,9 @@ class EstudantesController extends Controller
         $email = $request->email;
         $senha = $request->senha;
         $confirmacao = $request->confirmacao;
+        $foto_perfil = $request->foto_perfil->store('imagens', 'public');
 
-        $novo = Estudante::criarUsuario($nome, $email, $senha, $confirmacao);
+        $novo = Estudante::criarUsuario($nome, $email, $senha, $confirmacao, $foto_perfil);
 
         if ($novo == null) {
             return redirect("/registro")->with('msg', 'Dados inseridos incorretamente.');
