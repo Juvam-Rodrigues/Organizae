@@ -19,7 +19,7 @@ class Estudante extends Model
 
         if ($senha == $repetirSenha){
             $e = new Estudante([
-                'nome' => $nome, 'senha' => $senha, 'email' => $email, 'foto_perfil' => $foto_perfil
+                'nome' => $nome, 'email' => $email, 'foto_perfil' => $foto_perfil, 'senha' => Hash::make($senha)
             ]);
 
             $e->save();

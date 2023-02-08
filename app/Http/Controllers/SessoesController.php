@@ -14,11 +14,14 @@ class SessoesController extends Controller
     public function create(Request $r) {
         $email = $r->email;
         $senha = $r->senha;
-        Estudante::logar($email, $senha);
-        if(true){
+        
+        $comparacao = Estudante::logar($email, $senha);
+
+        if($comparacao==true){
             return redirect("/materias");
+        }else{
+            return redirect("/");
         }
-        return redirect("/login");
 
     }
 }

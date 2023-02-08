@@ -25,11 +25,12 @@
                 <a href="/" class="user"><i class="ri-user-3-fill"></i><span>Login</span></a>
                 <a href="/registro" class="user"><i class="ri-login-box-fill"></i><span>Registrar</span></a>
             </div>
+            
         </nav>
     </header>
     <main>
         <div class="content">
-
+            
             <form action="/logar" method="POST" id="form-login">
                 {{ csrf_field() }}
                 <h1>Login</h1>

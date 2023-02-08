@@ -27,6 +27,10 @@ class Materia extends Model
     public function criarAnotacoes(){
 
     }
+    // METAS
+    public function criarMetas(){
+
+    }
 
     //RELACIONAMENTOS:
 

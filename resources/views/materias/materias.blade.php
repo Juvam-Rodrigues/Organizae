@@ -23,7 +23,7 @@
 
             <div class="main">
 
-                <a href="./logoff.html" class="user"><i class="ri-user-3-fill"></i><span> Fulano </span></a>
+                <a href="./logoff.html" class="user"><i class="ri-user-3-fill"></i><span> {{ session()->get('estudante')->nome }} </span></a>
                 <!-- <a href="./cadastrar" class="user"><i class="ri-login-box-fill"></i><span>Registrar</span></a> -->
             </div>
         </nav>
