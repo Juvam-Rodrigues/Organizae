@@ -19,4 +19,10 @@ class MateriasController extends Controller
         $nova = session()->get('estudante')->criarMateria($nome);
         return redirect("/materias");
     }
+    public function destroy($id){
+        Materia::findOrFail($id)->delete();
+        return redirect("/materias");
+    }
+    
+    
 }

@@ -33,8 +33,8 @@
         </div>
         <div class="image-box">
             <img 
-            src="../../imagens/vecteezy_children-illustration_wk0321_generated.jpg"
-            alt="">
+            src="../../imagens/grouphoto.jpg"
+            alt="" id="imagestudy">
         </div>
     </main>
 </body>

@@ -42,10 +42,10 @@
         </div>
         <div class="logo-user">
             <div class="icon-box"><i class="ri-booklet-fill"></i></div>
-            <div class="titulo">
+            <div class="titulo" id="agenda">
 
                 <h2>Agenda do Estudante</h2>
-                <div class="row">
+                <div class="row" id="org">
                     <h3>Organiza-Aê</h3>
 
                 </div>

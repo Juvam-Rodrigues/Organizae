@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
@@ -52,9 +52,20 @@
                     
                     @foreach(session()->get('estudante')->materias()->get() as $materia)
                     <!-- modelo do card -->
+                
                     <div class="card">
                         <div class="icones-card-materia">
-                            <i class="ri-checkbox-circle-fill"></i>
+                            <form action="/materias/deletar/{{$materia -> id}}" id="form_lixeira" method="post">
+                                {{csrf_field()}}
+                                @method('DELETE')
+                                <button type="submit" id="iconelixeira"><i class="ri-delete-bin-7-fill"></i></button>
+                                
+                            </form>
+                            
+                            
+                        </div>
+                        <div class="icone-lapis" id="iconelapis">
+                            <button class="butao_pencil"><i class="ri-pencil-fill" id="pencil"></i></button>
                         </div>
                         <!-- conteúdo do card -->
                         <div class="card-content">
@@ -70,7 +81,7 @@
                         </div>
                         <!-- botão do card matéria -->
                         <div class="botao">
-                            <button class="entrar">Acessar</button>
+                            <a class="btn-entrar" href="#">Acessar</a>
                         </div>
                     </div>
                     @endforeach

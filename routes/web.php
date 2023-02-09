@@ -33,3 +33,6 @@ Route::get('/deslogar', [SessoesController::class, 'back']);
 Route::get('/sobrenos/logado', [SobreController::class, 'showLogado']);
 Route::get('/calendario', [CalendarioController::class, 'show']);
 Route::post('/materias/criar', [MateriasController::class, 'create']);
+Route::delete('/materias/deletar/{id}', [MateriasController::class, 'destroy']);
+Route::get('/materias/editar/{id}', [MateriasController::class, 'edit']);
+

@@ -63,6 +63,7 @@ nav i {
     color: var(--text-color);
     font-size: 1.6rem;
     font-weight: 600;
+    
 }
 /* ===== LOGIN & REGISTRO ===== */
 .user {
@@ -284,5 +285,54 @@ margin-left: 660px;
 #perfilft{
 
 margin-top: 0px;
+
+}
+.btn-entrar{
+    background-color: #0090ff;
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    padding: 7px 20px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+.btn-entrar:hover {
+    background-color: #0091ff7c;
+    color:rgb(255, 255, 255);
+}
+.icone-lapis{
+    max-width: 38vw;
+    width: 38px;
+}
+.icones-card-materia{
+    max-width: 38vw;
+    width: 38px;
+}
+.butao_pencil{
+    max-width: 38vw;
+    width: 36px;
+    height: 57px;
+    background-color: #0051ff00;
+    border: none;
+}
+.ri-pencil-fill{
+    color: #ffffff7e;
+}
+.ri-delete-bin-7-fill{
+    color: #ffffff7e;
+}
+#imagestudy{
+    margin-left: 50px;
+}
+#org{
+    margin-top: 5.5px;
+}
+#agenda{
+    margin-top: 5.5px;
+}
+#iconelixeira{
+    background-color: #0051ff00;
+    border: none
 
 }
