@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Matérias</title>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -24,19 +24,19 @@
             <a href="#" class="btn"><i class="ri-calendar-fill"></i></a>
             <div class="main" id="divperfil">
 
-                <a data-bs-toggle="offcanvas" id="perfilft" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" class="user"><img src="/storage/{{ session()->get('estudante')->foto_perfil }}" alt="" srcset="" width="40px" height="40px"><span> {{ session()->get('estudante')->nome }} </span></a>
+                <a data-bs-toggle="offcanvas" id="perfilft" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" class="user"><img src="/storage/{{ session()->get('estudante')->foto_perfil }}" alt="" srcset="" width="40px" height="40px" style="margin-right: 5px"> <span> {{ session()->get('estudante')->nome }} </span></a>
                 <!-- <a href="./cadastrar" class="user"><i class="ri-login-box-fill"></i><span>Registrar</span></a> -->
             </div>
 
         </nav>
     </header>
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
+        <div class="offcanvas-header" style="padding-bottom: 0.3%; margin-bottom: 0.3%;">
           <h5 class="offcanvas-title" id="offcanvasExampleLabel">Organiza Aê</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-          <div class="dropdown mt-3">
+        <div class="offcanvas-body" style="padding-top: 0%; margin-top: 0%;">
+          <div class="dropdown mt-3" id="espaco">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
               Ações
             </button>
