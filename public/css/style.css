@@ -7,13 +7,14 @@
 
 :root {
     --bg-dark-color: #222327;
-    
-    --text-color: #fff;
-    --text-secundary-color: #a7a7a7;
+    --bg-subdark-color:#2c2c2c;
+    --bg-gray-color:#797979;
     --main-color: #0099ff;
     --main-dark-color: #0050ff;
+    --text-color: #fff;
+    --text-secundary-color: #a7a7a7;
+    --icon-color: #fff;
     /* --bg-subdark-color:#b4b0ac; */
-    --bg-subdark-color:#2c2c2c;
 }
 
 body{
@@ -131,41 +132,40 @@ form h1 {
     color: var(--main-color);
 }
 /* ===== MATÉRIAS ===== */
-#slider {
-    box-sizing: border-box;
+/* #materias {
+    padding: 0 !important;
+    margin: 0 !important;
+} */
+#materias .content {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
-section .card .image {
-    height: 250px;
-    width: 250px;
+#materias .card {
+    background-color: var(--bg-gray-color);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px var(--bg-dark-color) ;
+    margin: 20px;
+    padding: 1em !important;
+    flex: 1 1 200px;
+    border: none;
+}
+#materias .card .image{
+    height: 200px;
+    width: 200px;
     padding: 5px;
+    margin: 20px;
 }
-section .card .image img {
+#materias .card .image img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid var(--main-dark-color);
+    border: 5px solid var(--main-color);
     background: var(--main-color);
 }
-.card {
-    position: relative;
-    background-color: #797979;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px var(--bg-dark-color);
-    margin: 20px 0;
-}
-.card::before {
-    content: "";
-    position: absolute;
-    height: 50%;
-    width: 100%;
-    background-color: var(--main-color);
-    border-radius: 20px 20px 0 0;
-}
-.card .card-content {
+#materias .card-content {
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -173,30 +173,90 @@ section .card .image img {
     position: relative;
     z-index: 100;
 }
-.card .icons-materias {
-    color: #fff;
-    position: absolute;
+#materias .card .icones-card-materia {
+    color: var(--icon-color);
     font-size: 2em;
-    top: 10px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
     opacity: 0.6;
 }
-.card .name-materia {
+#materias .card .nome-materia {
+    text-align: center;
+    color: var(--text-color);
+}
+#materias .card .botao {
+    text-align: center;
+    margin-top: 1em;
+}
+#materias .card .botao button {
+    background-color: var(--main-color);
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    padding: 7px 20px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+#materias .card .nome-materia {
     display: flex;
     flex-direction:column;
     align-items: center;
-    margin-top: 10px;
     color: var(--text-color);
-    padding-bottom: 1.4rem;
 }
-.name-materia .name {
+#materias .nome-materia .nome {
     font-size: 1.4rem;
     font-weight: 600;
 }
-/* = = = = = = = = = = */
+#card-adicionar-materia {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+#card-adicionar-materia .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#card-adicionar-materia i {
+    font-size: 200px;
+    color: var(--icon-color);
+    opacity: 0.6;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    
+}
+#card-adicionar-materia:hover{
+    opacity: 0.5;
+}
+#botao-adicionar-materia {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+}
+#botao-adicionar-materia button {
+    background-color: transparent !important;
+    
+}
+#botao-adicionar-materia .nome-materia {
+    opacity: 0.6;
+}
+/* ===== SIDEBAR ===== */
+.sidebar {
+    background-color: var(--bg-dark-color) !important;
+    color: var(--text-color);
+}
+.sidebar .btn-close {
+    background-color: var(--text-color) !important;
+}
+.sidebar .dropdown-menu {
+    background-color: var(--bg-gray-color) !important;
+}
+/* ================= */
+#offcanvasExampleLabel i {
+    color:var(--main-color) !important;
+    margin-right: 5px;
+}
 @media (max-width: 1280px){
     header{
         padding: 14px 2%;

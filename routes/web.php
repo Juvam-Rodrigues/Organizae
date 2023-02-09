@@ -5,7 +5,7 @@ use App\Http\Controllers\EstudantesController;
 use App\Http\Controllers\SessoesController;
 use App\Http\Controllers\MateriasController;
 use App\Http\Controllers\SobreController;
-
+use App\Http\Controllers\CalendarioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,5 +31,5 @@ Route::get('/materias', [MateriasController::class, 'materia']);
 Route::get('/sobrenos', [SobreController::class, 'show']);
 Route::get('/deslogar', [SessoesController::class, 'back']);
 Route::get('/sobrenos/logado', [SobreController::class, 'showLogado']);
-
-
+Route::get('/calendario', [CalendarioController::class, 'show']);
+Route::post('/materias/criar', [MateriasController::class, 'create']);

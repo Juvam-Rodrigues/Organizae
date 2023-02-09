@@ -67,13 +67,14 @@ class Estudante extends Model
 
     // MATÉRIAS
     
-    public function criarMaterias(){
-    
+    public function criarMateria($nome){
+        $m = new Materia(['nome_da_materia' => $nome]);
+        $this->materias()->save($m);
     }
 
     //RELACIONAMENTOS
 
     public function materias(){
-        return $this->hasMany(Materia::class, 'materias');
+        return $this->hasMany(Materia::class);
     }
 }
