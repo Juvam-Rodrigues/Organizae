@@ -55,7 +55,7 @@
                 
                     <div class="card">
                         <div class="icones-card-materia">
-                            <form action="/materias/deletar/{{$materia -> id}}" id="form_lixeira" method="post">
+                            <form action="/materias/deletar/{{$materia->id}}" id="form_lixeira" method="post">
                                 {{csrf_field()}}
                                 @method('DELETE')
                                 <button type="submit" id="iconelixeira"><i class="ri-delete-bin-7-fill"></i></button>
@@ -65,8 +65,30 @@
                             
                         </div>
                         <div class="icone-lapis" id="iconelapis">
-                            <button class="butao_pencil" data-bs-toggle="modal" data-bs-target="#modal_pencil"><i class="ri-pencil-fill" id="pencil"></i></button>
+                            <button class="butao_pencil" data-bs-toggle="modal" data-bs-target="#modal_pencil_{{ $materia->id }}"><i class="ri-pencil-fill" id="pencil"></i></button>
                         </div>
+                        <div class="modal fade" id="modal_pencil_{{ $materia->id }}" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title text-black">Editar Matéria</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <form action="/materias/editar/{{$materia->id}}" method="post">
+                                    {{ csrf_field() }}
+                                    @method('PUT')
+                                    
+                                    <div class="modal-body">
+                                        <label for="novo_materia" style="color: black">Insira o novo nome da matéria:</label>
+                                        <input type="text" class="form-control" id="novo_materia" name="nome_novo">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary">Salvar</button>
+                                    </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
                         <!-- conteúdo do card -->
                         <div class="card-content">
                             <!-- imagem do card -->
@@ -122,29 +144,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Criar</button>
-                </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal fade" id="modal_pencil" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title text-black">Editar Matéria</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form action="/materias/editar/{{$materia -> id}}" method="post">
-                {{ csrf_field() }}
-                @method('PUT')
-                
-                <div class="modal-body">
-                    <label for="novo_materia" style="color: black">Insira o novo nome da matéria:</label>
-                    <input type="text" class="form-control" id="novo_materia" name="nome_novo">
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Salvar</button>
                 </div>
             </form>
           </div>
