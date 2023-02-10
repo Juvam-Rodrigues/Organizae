@@ -23,6 +23,13 @@ class MateriasController extends Controller
         Materia::findOrFail($id)->delete();
         return redirect("/materias");
     }
+    public function edit(Request $request){
+        $nome = $request->nome_novo;
+        
+        Materia::findOrFail($request->id)->update(['nome_da_materia' => $nome]);
+       
+        return redirect("/materias");
+    }
     
     
 }
