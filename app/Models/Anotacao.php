@@ -23,7 +23,7 @@ class Anotacao extends Model
     public function ocultarAnotacao(){
 
     }
-    public function compartilharAnotacoes(){
+    public function compartilharAnotacaos(){
 
     }
 

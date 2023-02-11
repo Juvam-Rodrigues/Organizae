@@ -6,14 +6,14 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-       /**
+    /**
      * Run the migrations.
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('anotacoes', function (Blueprint $table) {
+        Schema::create('anotacaos', function (Blueprint $table) {
             $table->id();
             $table->string('titulo', 150);
             $table->string('corpo', 800);
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('anotacoes');
+        Schema::dropIfExists('anotacaos');
     }
 };

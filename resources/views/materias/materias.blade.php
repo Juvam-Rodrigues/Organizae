@@ -103,7 +103,7 @@
                         </div>
                         <!-- botão do card matéria -->
                         <div class="botao">
-                            <a class="btn-entrar" href="#">Acessar</a>
+                            <a class="btn-entrar" href="/materias/acessar/{{$materia->id}}">Acessar</a>
                         </div>
                     </div>
                     @endforeach

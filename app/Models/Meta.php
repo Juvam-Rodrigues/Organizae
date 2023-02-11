@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Meta extends Model
 {
     use HasFactory;
-    protected $fillable = ['nome_da_meta', 'conclusao', 'descricao', 'data_inicial', 'data_final']; 
+    protected $fillable = ['nome_da_meta']; 
 
     // METAS
     public function editarMeta(){

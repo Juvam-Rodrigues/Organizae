@@ -31,6 +31,14 @@ class MateriasController extends Controller
        
         return redirect("/materias");
     }
+    public function show($id) {
+        $materia = Materia::find($id);
+        if ($materia != null)
+        {
+            return view("materias/inmateria", compact('materia'));
+        }
+        return redirect('/materias');
+    }
     
     
 }

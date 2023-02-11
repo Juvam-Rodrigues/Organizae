@@ -6,6 +6,9 @@ use App\Http\Controllers\SessoesController;
 use App\Http\Controllers\MateriasController;
 use App\Http\Controllers\SobreController;
 use App\Http\Controllers\CalendarioController;
+use App\Http\Controllers\AnotacoesController;
+use App\Http\Controllers\MetasController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,4 +39,12 @@ Route::post('/materias/criar', [MateriasController::class, 'create']);
 Route::delete('/materias/deletar/{id}', [MateriasController::class, 'destroy']);
 
 Route::put('/materias/editar/{id}', [MateriasController::class, 'edit']);
+Route::get('/materias/acessar/{id}', [MateriasController::class, 'show']);
+
+Route::post('/anotacoes/criar', [AnotacoesController::class, 'create']);
+
+Route::post('/metas/criar', [MetasController::class, 'create']);
+
+
+
 

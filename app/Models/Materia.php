@@ -24,25 +24,27 @@ class Materia extends Model
 
     }
     // ANOTAÇÕES
-    public function criarAnotacoes(){
-
+    public function criarAnotacaos($titulo, $corpo){
+        $anotacao = new Anotacao(['titulo' => $titulo , 'corpo' => $corpo]);
+        $this->anotacaos()->save($anotacao);
     }
     // METAS
-    public function criarMetas(){
-
+    public function criarMetas($nome){
+        $meta = new Meta(['nome_da_meta' => $nome]);
+        $this->metas()->save($meta);
     }
 
     //RELACIONAMENTOS:
 
     public function metas(){
-        return $this->hasMany(Meta::class, 'metas');
+        return $this->hasMany(Meta::class);
     }
-    public function anotacoes(){
-        return $this->hasMany(Anotacao::class, 'anotacoes');
+    public function anotacaos(){
+        return $this->hasMany(Anotacao::class);
     }
 
     public function estudante(){
-        return $this->belongsTo(Estudante::class, 'estudantes');
+        return $this->belongsTo(Estudante::class);
     }
 
 }
