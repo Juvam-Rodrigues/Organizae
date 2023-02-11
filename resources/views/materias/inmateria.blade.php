@@ -94,7 +94,7 @@
             @foreach($materia->anotacaos()-> get() as $anotacoes)
             <div class="card-anotacao-conteudo">
                 <div class="titulo text-center">
-                    <h1>{{ $anotacoes->titulo }}</h1>
+                    <h3>{{ $anotacoes->titulo }}</h3>
                 </div>
                 <div class="texto text">
                     <p>{{ $anotacoes->corpo }}</p>
