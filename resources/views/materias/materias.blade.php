@@ -54,19 +54,20 @@
                     <!-- modelo do card -->
                 
                     <div class="card">
-                        <div class="icones-card-materia">
-                            <form action="/materias/deletar/{{$materia->id}}" id="form_lixeira" method="post">
-                                {{csrf_field()}}
-                                @method('DELETE')
-                                <button type="submit" id="iconelixeira"><i class="ri-delete-bin-7-fill"></i></button>
-                                
-                            </form>
-                            
-                            
-                        </div>
-                        <div class="icone-lapis" id="iconelapis">
-                            <button class="butao_pencil" data-bs-toggle="modal" data-bs-target="#modal_pencil_{{ $materia->id }}"><i class="ri-pencil-fill" id="pencil"></i></button>
-                        </div>
+                
+                            <div class="row">
+                                <div class="col-2">
+                                    <form action="/materias/deletar/{{$materia->id}}" id="form_lixeira" method="post">
+                                        {{csrf_field()}}
+                                        @method('DELETE')
+                                        <button type="submit" id="iconelixeira"><i class="ri-delete-bin-7-fill"></i></button>
+                                    </form>
+                                </div>
+                                <div class="col-2" style="margin-left: 20px">
+                                        <button class="butao_pencil" data-bs-toggle="modal" data-bs-target="#modal_pencil_{{ $materia->id }}"><i class="ri-pencil-fill" id="pencil"></i></button>
+                                </div>
+                            </div>
+
                         <div class="modal fade" id="modal_pencil_{{ $materia->id }}" tabindex="-1" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">

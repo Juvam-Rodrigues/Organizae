@@ -79,7 +79,9 @@
                 <div class="titulo">
                     <div class="row">
                         <div class="col-10">
-                            <p style="background-color: #0D6EFD; color:white; overflow-wrap: break-word; border-radius:5px; padding:10px;" data-bs-toggle="modal" data-bs-target="#modal">{{ $metas->nome_da_meta }}</p>
+                            <p style="background-color: #0D6EFD; color:white; overflow-wrap: break-word; border-radius:5px; padding:10px;
+                            margin-top:10px; margin-left:5px" 
+                            data-bs-toggle="modal" data-bs-target="#modal">{{ $metas->nome_da_meta }}</p>
                         </div>
                         <div class="col-1">
                             <form action="/metas/deletar/{{$metas->id}}" id="form_lixeira" method="post">
@@ -133,15 +135,15 @@
             @foreach($materia->anotacaos()-> get() as $anotacoes)
             <div class="card-anotacao-conteudo">
                 <div class="row">
-                    <div class="col-1">
+                    <div class="col-2">
                         <form action="/anotacoes/deletar/{{$anotacoes->id}}" id="form_lixeira" method="post">
                             {{csrf_field()}}
                             @method('DELETE')
                             <input type="hidden" name="materia_id" value="{{ $materia->id }}">
-                            <button type="submit" id="iconelixeira"><i class="ri-delete-bin-7-fill" style="padding: 50%"></i></button>
+                            <button type="submit" id="iconelixeira" style="margin-bottom:5px;"><i class="ri-delete-bin-7-fill" style="padding: 50%; margin-bottom:20px; "></i></button>
                         </form>
                     </div>
-                    <div class="col-1">
+                    <div class="col-2">
                         <div class="icone-lapis" id="iconelapis">
                             <button class="butao_pencil" data-bs-toggle="modal" data-bs-target="#modal_pencil_{{ $materia->id }}"><i class="ri-pencil-fill" id="pencil"></i></button>
                         </div>
@@ -183,6 +185,8 @@
             </div>
             
             @endforeach
+        </div>
+
         <div id="janelaEdicao">
             <button id="janelaEdicaoBtnFechar">
                 <i class="fa fa-remove fa-2x"></i>

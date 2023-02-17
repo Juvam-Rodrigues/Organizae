@@ -310,7 +310,6 @@ margin-top: 0px;
     width: 38px;
 }
 .butao_pencil{
-    max-width: 38vw;
     width: 36px;
     height: 57px;
     background-color: #0051ff00;
@@ -333,6 +332,17 @@ margin-top: 0px;
 }
 #iconelixeira{
     background-color: #0051ff00;
-    border: none
-
+    border: none;
+    margin-top: 15px;
+    width: 20px;
+    height: 20px;
+    max-width: 38vw;
+    width: 38px;
+}
+#pencil{
+    max-width: 38vw;
+    width: 38px;
+}
+.box{
+    display: inline-block;
 }
