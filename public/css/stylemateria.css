@@ -477,3 +477,9 @@ form {
 .card-anotacao .texto {
     text-align: justify;
 }
+#titulo{
+    background-color: #0D6EFD;
+    border-radius: 5px;
+    padding: 1%;
+
+}

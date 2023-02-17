@@ -42,8 +42,16 @@ Route::put('/materias/editar/{id}', [MateriasController::class, 'edit']);
 Route::get('/materias/acessar/{id}', [MateriasController::class, 'show']);
 
 Route::post('/anotacoes/criar', [AnotacoesController::class, 'create']);
+Route::put('/anotacoes/editar/{id}', [AnotacoesController::class, 'edit']);
+Route::delete('/anotacoes/deletar/{id}', [AnotacoesController::class, 'destroy']);
+
 
 Route::post('/metas/criar', [MetasController::class, 'create']);
+Route::put('/metas/editar/{id}', [MetasController::class, 'edit']);
+Route::delete('/metas/deletar/{id}', [MetasController::class, 'destroy']);
+
+
+
 
 
 

@@ -19,4 +19,20 @@ class AnotacoesController extends Controller
         }
         return redirect('/materias');
     }
+    public function edit(Request $request){
+        $titulo = $request->titulo_novo;
+        $corpo = $request->corpo_novo;
+        $id_materia = $request->materia_id;
+
+        Anotacao::findOrFail($request->id)->update(['titulo' => $titulo, 'corpo' => $corpo]);
+       
+        return redirect('/materias/acessar/'.$id_materia);
+    }
+    
+    public function destroy($id, Request $request){
+        $id_materia = $request->materia_id;
+        Anotacao::findOrFail($id)->delete();
+        return redirect('/materias/acessar/'.$id_materia);
+    }
+
 }

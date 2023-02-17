@@ -25,8 +25,8 @@
 <body>
 
     <header>
-        <nav>
-
+        <nav style="margin-bottom: 10px; margin-top: 10px">
+            <a href="/materias" class="user"><i class="ri-arrow-left-circle-fill"></i><span>Voltar</span></a>
             <a href="/sobrenos/logado" class="logo"><i class="ri-booklet-fill"></i><span>Organiza Aê</span></a>
 
             <div class="main">
@@ -51,8 +51,8 @@
         </div>
       </div>
 
-    <nav id="nav2">
-        <div class="logo" id="nomemateria"> {{ $materia->nome_da_materia }} </div>
+    <nav id="nav2" style="padding-top: 15px; padding-bottom: 20px;">
+        <div class="logo" id="nomemateria" style="margin-left: 44px"> {{ $materia->nome_da_materia }} </div>
     </nav>
 
     
@@ -76,10 +76,49 @@
            
             @foreach($materia->metas()-> get() as $metas)
             <div class="card-anotacao-conteudo">
-                <div class="titulo text-cemter">
-                    <a class="btn" style="background-color: #0D6EFD; color:white;">{{ $metas->nome_da_meta }}</a>
+                <div class="titulo">
+                    <div class="row">
+                        <div class="col-10">
+                            <p style="background-color: #0D6EFD; color:white; overflow-wrap: break-word; border-radius:5px; padding:10px;" data-bs-toggle="modal" data-bs-target="#modal">{{ $metas->nome_da_meta }}</p>
+                        </div>
+                        <div class="col-1">
+                            <form action="/metas/deletar/{{$metas->id}}" id="form_lixeira" method="post">
+                                {{csrf_field()}}
+                                @method('DELETE')
+                                <input type="hidden" name="materia_id" value="{{ $materia->id }}">
+                                <button type="submit" id="iconelixeira"><i class="ri-delete-bin-7-fill" style="padding: 50%"></i></button>
+                            </form>
+                        </div> 
+                    </div>
                 </div>
             </div>
+
+          <div class="modal fade" id="modal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-black">Editar Anotação</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="/metas/editar/{{$metas->id}}" method="post">
+                        {{ csrf_field() }}
+                        @method('PUT')
+                        <h6 style="text-align: center; color:black;"><strong>{{ $metas->nome_da_meta }}</strong></h6>
+                        
+                        <input type="hidden" name="materia_id" value="{{ $materia->id }}">
+                        <div class="modal-body">
+                            <label for="novo_materia" style="color: black">Insira o novo nome da meta:</label>
+                            <input type="text" class="form-control" id="nome_novo" name="nome_novo">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
 
             @endforeach
         </div>
@@ -93,8 +132,50 @@
             </div>
             @foreach($materia->anotacaos()-> get() as $anotacoes)
             <div class="card-anotacao-conteudo">
+                <div class="row">
+                    <div class="col-1">
+                        <form action="/anotacoes/deletar/{{$anotacoes->id}}" id="form_lixeira" method="post">
+                            {{csrf_field()}}
+                            @method('DELETE')
+                            <input type="hidden" name="materia_id" value="{{ $materia->id }}">
+                            <button type="submit" id="iconelixeira"><i class="ri-delete-bin-7-fill" style="padding: 50%"></i></button>
+                        </form>
+                    </div>
+                    <div class="col-1">
+                        <div class="icone-lapis" id="iconelapis">
+                            <button class="butao_pencil" data-bs-toggle="modal" data-bs-target="#modal_pencil_{{ $materia->id }}"><i class="ri-pencil-fill" id="pencil"></i></button>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modal_pencil_{{ $materia->id }}" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title text-black">Editar Anotação</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <form action="/anotacoes/editar/{{$anotacoes->id}}" method="post">
+                                {{ csrf_field() }}
+                                @method('PUT')
+                                <input type="hidden" name="materia_id" value="{{ $materia->id }}">
+                                <div class="modal-body">
+                                    <label for="novo_materia" style="color: black">Insira o novo título da anotação:</label>
+                                    <input type="text" class="form-control" id="titulo_novo" name="titulo_novo">
+                                    ""
+                                    <label for="novo_materia" style="color: black">Insira o novo corpo da anotação:</label>
+                                    <textarea name="corpo_novo" id="ant" cols="50" rows="20" id="corpo"></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Salvar</button>
+                                </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+                
                 <div class="titulo text-center">
-                    <h3>{{ $anotacoes->titulo }}</h3>
+                    <h4 id="titulo">{{ $anotacoes->titulo }}</h4>
                 </div>
                 <div class="texto text">
                     <p>{{ $anotacoes->corpo }}</p>

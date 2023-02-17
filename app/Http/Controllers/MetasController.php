@@ -19,4 +19,18 @@ class MetasController extends Controller
         }
         return redirect('/materias');
     }
+    public function edit(Request $request){
+        $nome_da_meta = $request->nome_novo;
+        $id_materia = $request->materia_id;
+
+        Meta::findOrFail($request->id)->update(['nome_da_meta' => $nome_da_meta]);
+       
+        return redirect('/materias/acessar/'.$id_materia);
+    }
+
+    public function destroy($id, Request $request){
+        $id_materia = $request->materia_id;
+        Meta::findOrFail($id)->delete();
+        return redirect('/materias/acessar/'.$id_materia);
+    }
 }
