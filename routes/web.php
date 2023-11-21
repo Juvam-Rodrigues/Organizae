@@ -1,10 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
 use App\Http\Controllers\MeuController;
 use App\Http\Controllers\Foobar;
-=======
 use App\Http\Controllers\EstudantesController;
 use App\Http\Controllers\SessoesController;
 use App\Http\Controllers\MateriasController;
@@ -12,7 +10,10 @@ use App\Http\Controllers\SobreController;
 use App\Http\Controllers\CalendarioController;
 use App\Http\Controllers\AnotacoesController;
 use App\Http\Controllers\MetasController;
->>>>>>> 8863afb50ecb1b78b672685444b0cbc9c8c2fbc5
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,6 @@ use App\Http\Controllers\MetasController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-<<<<<<< HEAD
 */
 
 
@@ -31,8 +31,7 @@ Route::delete('/organizae/{id}', [MeuController::class, 'apagarConta']);
 Route::get('/',  [MeuController::class, 'login']); //1° argumento: url, 2°: Redirecionando para esse controler através do metodo login
 Route::get('organizae/materia', [MeuController::class, 'materia']);
 Route::get('/test',  [Foobar::class, 'teste']);
-=======
-*/// new create update destroy 
+/// new create update destroy 
 
 Route::get('/', function () {
     return view('welcome');
@@ -70,4 +69,3 @@ Route::delete('/metas/deletar/{id}', [MetasController::class, 'destroy']);
 
 
 
->>>>>>> 8863afb50ecb1b78b672685444b0cbc9c8c2fbc5

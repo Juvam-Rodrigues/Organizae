@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Materia;
 
+
 class Estudante extends Model
 {
     use HasFactory;
