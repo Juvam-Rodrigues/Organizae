@@ -60,6 +60,10 @@
             "pestphp/pest-plugin": true
         }
     },
+<<<<<<< HEAD
     "minimum-stability": "dev",
+=======
+    "minimum-stability": "stable",
+>>>>>>> 8863afb50ecb1b78b672685444b0cbc9c8c2fbc5
     "prefer-stable": true
 }

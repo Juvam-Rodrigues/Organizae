@@ -55,5 +55,4 @@ class Meta extends Model
         return $this->belongsTo(Materia::class, 'materias');
     }
 
-
 }

@@ -103,6 +103,14 @@ return [
         'string' => 'The :attribute must be at least :min characters.',
     ],
     'min_digits' => 'The :attribute must have at least :min digits.',
+<<<<<<< HEAD
+=======
+    'missing' => 'The :attribute field must be missing.',
+    'missing_if' => 'The :attribute field must be missing when :other is :value.',
+    'missing_unless' => 'The :attribute field must be missing unless :other is :value.',
+    'missing_with' => 'The :attribute field must be missing when :values is present.',
+    'missing_with_all' => 'The :attribute field must be missing when :values are present.',
+>>>>>>> 8863afb50ecb1b78b672685444b0cbc9c8c2fbc5
     'multiple_of' => 'The :attribute must be a multiple of :value.',
     'not_in' => 'The selected :attribute is invalid.',
     'not_regex' => 'The :attribute format is invalid.',

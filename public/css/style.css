@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+:root {
+    --bg-dark-color: #222327;
+    --bg-subdark-color:#2c2c2c;
+    --bg-gray-color:#797979;
+    --main-color: #0099ff;
+    --main-dark-color: #0050ff;
+    --text-color: #fff;
+    --text-secundary-color: #a7a7a7;
+    --icon-color: #fff;
+    /* --bg-subdark-color:#b4b0ac; */
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--bg-subdark-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+/* ===== NAVBAR ===== */
+header {
+    background-color: var(--bg-dark-color);
+}
+header, main {
+    padding: 28px 12%;
+    transition: all .50s ease;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 7vh;
+}
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+}
+nav i {
+    color: var(--main-color);
+    margin-right: 7px;
+    color: var(--main-color);
+    font-size: 28px;
+    font-weight: 7px;
+    margin-right: 3px;
+}
+.logo {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo span{
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    
+}
+/* ===== LOGIN & REGISTRO ===== */
+.user {
+    display: inline-flex;
+    align-items: center;
+}
+main {
+    display: flex;
+    justify-content: space-around;
+    height: 93vh;
+}
+main .content {
+    height: 70%;
+}
+main .content span{
+    font-weight: 600;
+}
+main .image-box img {
+    max-height: 70%;
+    max-width: 80%;
+    border-radius: 30px;
+}
+main input {
+    background: none;
+    border: none;
+    color: var(--text-secundary-color);
+    border-bottom: 2px solid var(--text-secundary-color);
+    width: 90%;
+    margin-bottom: 2em;
+    font-size: 1rem;
+}
+main button {
+    text-decoration: none;
+    padding: 1em;
+    font-size: 16pt;
+    cursor: pointer;
+    margin-top: 40px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    color: var(--bg-dark-color);
+    font-weight: bold;
+    background-color: var(--main-color);
+    text-align: center;
+}
+main input:focus {
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: 0;
+    border-bottom: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+main .logo-user {
+    display: flex;
+    height: 70%;
+    margin: auto;
+}
+main .logo-user div i {
+    font-size: 100px;
+    color: var(--main-color);
+}
+form h1 {
+    font-weight: bold;
+    padding: 1em;
+    padding-left: 0;
+    color: var(--main-color);
+}
+/* ===== MATÉRIAS ===== */
+/* #materias {
+    padding: 0 !important;
+    margin: 0 !important;
+} */
+#materias .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#materias .card {
+    background-color: var(--bg-gray-color);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px var(--bg-dark-color) ;
+    margin: 20px;
+    padding: 1em !important;
+    flex: 1 1 200px;
+    border: none;
+}
+#materias .card .image{
+    height: 200px;
+    width: 200px;
+    padding: 5px;
+    margin: 20px;
+}
+#materias .card .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--main-color);
+    background: var(--main-color);
+}
+#materias .card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+#materias .card .icones-card-materia {
+    color: var(--icon-color);
+    font-size: 2em;
+    opacity: 0.6;
+}
+#materias .card .nome-materia {
+    text-align: center;
+    color: var(--text-color);
+}
+#materias .card .botao {
+    text-align: center;
+    margin-top: 1em;
+}
+#materias .card .botao button {
+    background-color: var(--main-color);
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    padding: 7px 20px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+#materias .card .nome-materia {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    color: var(--text-color);
+}
+#materias .nome-materia .nome {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+#card-adicionar-materia {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+#card-adicionar-materia .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#card-adicionar-materia i {
+    font-size: 200px;
+    color: var(--icon-color);
+    opacity: 0.6;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    
+}
+#card-adicionar-materia:hover{
+    opacity: 0.5;
+}
+#botao-adicionar-materia {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+}
+#botao-adicionar-materia button {
+    background-color: transparent !important;
+    
+}
+#botao-adicionar-materia .nome-materia {
+    opacity: 0.6;
+}
+/* ===== SIDEBAR ===== */
+.sidebar {
+    background-color: var(--bg-dark-color) !important;
+    color: var(--text-color);
+}
+.sidebar .btn-close {
+    background-color: var(--text-color) !important;
+}
+.sidebar .dropdown-menu {
+    background-color: var(--bg-gray-color) !important;
+}
+/* ================= */
+#offcanvasExampleLabel i {
+    color:var(--main-color) !important;
+    margin-right: 5px;
+}
+@media (max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+    .user > span, main > .logo-user {
+        display: none;
+    }
+
+    main {
+        height: 70vh;
+        margin-bottom: 0;
+    }
+
+}
+.ri-calendar-fill{
+
+margin-left: 660px;
+
+}
+#perfilft{
+
+margin-top: 0px;
+
+}
+.btn-entrar{
+    background-color: #0090ff;
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    padding: 7px 20px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+.btn-entrar:hover {
+    background-color: #0091ff7c;
+    color:rgb(255, 255, 255);
+}
+.icone-lapis{
+    max-width: 38vw;
+    width: 38px;
+}
+.icones-card-materia{
+    max-width: 38vw;
+    width: 38px;
+}
+.butao_pencil{
+    width: 36px;
+    height: 57px;
+    background-color: #0051ff00;
+    border: none;
+}
+.ri-pencil-fill{
+    color: #ffffff7e;
+}
+.ri-delete-bin-7-fill{
+    color: #ffffff7e;
+}
+#imagestudy{
+    margin-left: 50px;
+}
+#org{
+    margin-top: 5.5px;
+}
+#agenda{
+    margin-top: 5.5px;
+}
+#iconelixeira{
+    background-color: #0051ff00;
+    border: none;
+    margin-top: 15px;
+    width: 20px;
+    height: 20px;
+    max-width: 38vw;
+    width: 38px;
+}
+#pencil{
+    max-width: 38vw;
+    width: 38px;
+}
+.box{
+    display: inline-block;
+}
