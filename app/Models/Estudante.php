@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 
 class Estudante extends Model
 {
@@ -23,6 +24,7 @@ class Estudante extends Model
         }
         return null;
     }
+
     public static function logar($email, $senha){
         $estudante = Estudante::where('email', $email)->first();
 
